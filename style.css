@@ -1,0 +1,33 @@
+.hide{
+    display: none;
+}
+.contenedor-column{
+    display: flex;
+    flex-direction: column;
+}
+.contenedor-row{
+    display: flex;
+    flex-direction: row;
+}
+.contenedor-row-arn{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.contenedor-row-btw{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.basis-33{
+    flex-basis: 33.3%;
+}
+.basis-66{
+    flex-basis: 66.6%;
+}
+.txt-center{
+    text-align: center;
+}
+.margin-1{
+    margin: 1rem;
+}
