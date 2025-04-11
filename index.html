@@ -1,1263 +1,763 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Estadisticas</title>
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <header>
-        </header>
-<!--Menú de estadísticas-->
-        <section class="contenedor-column">
-            <div class="contenedor-column">
-                <h1>Armadores</h1>
-                <div class="contenedor-row">
-                    <button onclick="mostrarOcultarEmanuel()">Emanuel</button>
-                    <button onclick="mostrarOcultarPika()">Pika</button>
-                </div>
-            </div>
-            <div>
-                <h1>Puntas</h1>
-                <div>
-                    <button onclick="mostrarOcultarMati()">Mati</button>
-                    <button onclick="mostrarOcultarGusti()">Gusti</button>
-                    <button onclick="mostrarOcultarHernan()">Hernan</button>
-                    <button onclick="mostrarOcultarEmi()">Emi</button>
-                </div>
-            </div>
-            <div>
-                <h1>Centrales</h1>
-                <div>
-                    <button onclick="mostrarOcultarFausto()">Fausto</button>
-                    <button onclick="mostrarOcultarSanti()">Santi</button>
-                    <button onclick="mostrarOcultarMartu()">Martu</button>
-                </div>
-            </div>
-            <div>
-                <h1>Opuestos</h1>
-                <div>
-                    <button onclick="mostrarOcultarEloy()">Eloy</button>
-                    <button onclick="mostrarOcultarFranco()">Franco</button>
-                </div>
-            </div>
-            <div>
-                <h1>Liberos</h1>
-                <div>
-                    <button onclick="mostrarOcultarMafu()">Mafu</button>
-                    <button onclick="mostrarOcultarBauti()">Bauti</button>
-                </div>
-            </div>
-        </section>
-<!--EMANUEL-->
-    <!--SAQUE EMANUEL-->
-        <section id="emanuel" style="display:none" class="contenedor-column">
-            <div class="contenedor-row">
-                <h1 class="txt-center">Emanuel</h1>
-            </div>
-            <div class="contenedor-row-btw margin-1">
-                <div class="basis-33">Saque</div>
-                <div class="basis-66">
-                    <div class="basis-33 contenedor-row-arn">
-                        <button onclick="saqueDentroRestaEmanuel()">-</button>
-                        <div id="saqueDentroEmanuel"></div>
-                        <button onclick="saqueDentroSumaEmanuel()">+</button>
-                    </div>
-                </div>
-            </div>
-            <div class="contenedor-row-btw margin-1">
-                <div class="basis-33">Saque errado</div>
-                <div class="basis-66">
-                    <div class="basis-33 contenedor-row-arn" >
-                        <button onclick="saqueFueraRestaEmanuel()">-</button>
-                        <div id="saqueFueraEmanuel"></div>
-                        <button onclick="saqueFueraSumaEmanuel()">+</button>
-                    </div>
-                </div>
-            </div>
-            <div class="contenedor-row-btw margin-1">
-                <div class="basis-33">ACE</div>
-                <div class="basis-66">
-                    <div class="basis-33 contenedor-row-arn">
-                        <button onclick="aceRestaEmanuel()">-</button>
-                        <div id="aceEmanuel"></div>
-                        <button onclick="aceSumaEmanuel()">+</button>
-                    </div>
-                </div>
-            </div>
-    <!--ATAQUE EMANUEL-->
-            <div class="contenedor-row-btw margin-1">
-                <div class="basis-33">Ataque</div>
-                <div class="basis-66">
-                    <div class="basis-33 contenedor-row-arn">
-                        <button onclick="ataqueRestaEmanuel()">-</button>
-                        <div id="ataqueEmanuel"></div>
-                        <button onclick="ataqueSumaEmanuel()">+</button>
-                    </div>
-                </div>
-            </div>      
-            <div class="contenedor-row-btw margin-1">
-                <div class="basis-33">Ataque Errado</div>
-                <div class="basis-66">
-                    <div class="basis-33 contenedor-row-arn">
-                        <button onclick="ataqueErrRestaEmanuel()">-</button>
-                        <div id="ataqueErrEmanuel"></div>
-                        <button onclick="ataqueErrSumaEmanuel()">+</button>
-                    </div>
-                </div>
-            </div>
-            <div class="contenedor-row-btw margin-1">
-                <div class="basis-33">Punto de ataque</div>
-                <div class="basis-66">
-                    <div class="basis-33 contenedor-row-arn">
-                        <button onclick="ataquePuntoRestaEmanuel()">-</button>
-                        <div id="ataquePuntoEmanuel"></div>
-                        <button onclick="ataquePuntoSumaEmanuel()">+</button>
-                    </div>
-                </div>
-            </div>
-        </section>
-<!--PIKA-->
-    <!--SAQUE PIKA-->
-        <section id="pika" style="display:none" class="contenedor-column">
-            <div class="contenedor-row">
-                <h1 class="txt-center">Pika</h1>
-            </div>
-            <div class="contenedor-row-btw margin-1">
-                <div class="basis-33">Saque</div>
-                <div class="basis-66">
-                    <div class="basis-33 contenedor-row-arn">
-                        <button onclick="saqueDentroRestaPika()">-</button>
-                        <div id="saqueDentroPika"></div>
-                        <button onclick="saqueDentroSumaPika()">+</button>
-                    </div>
-                </div>
-            </div>
-            <div class="contenedor-row-btw margin-1">
-                <div class="basis-33">Saque errado</div>
-                <div class="basis-66">    
-                    <div class="basis-33 contenedor-row-arn">
-                        <button onclick="saqueFueraRestaPika()">-</button>
-                        <div id="saqueFueraPika"></div>
-                        <button onclick="saqueFueraSumaPika()">+</button>
-                    </div>
-                </div>
-            </div>
-            <div class="contenedor-row-btw margin-1">
-                <div class="basis-33">ACE</div>
-                <div class="basis-66">
-                    <div class="basis-33 contenedor-row-arn">
-                        <button onclick="aceRestaPika()">-</button>
-                        <div id="acePika"></div>
-                        <button onclick="aceSumaPika()">+</button>
-                    </div>
-                </div>
-            </div>
-    <!--ATAQUE PIKA-->
-            <div class="contenedor-row-btw margin-1">
-                <div class="basis-33">Ataque</div>
-                <div class="basis-66">
-                    <div class="basis-33 contenedor-row-arn">
-                        <button onclick="ataqueRestaPika()">-</button>
-                        <div id="ataquePika"></div>
-                        <button onclick="ataqueSumaPika()">+</button>
-                    </div>
-                </div>
-            </div>
-            <div class="contenedor-row-btw margin-1">
-                <div class="basis-33">Ataque errado</div>
-                <div class="basis-66">
-                    <div class="basis-33 contenedor-row-arn">
-                        <button onclick="ataqueErrRestaPika()">-</button>
-                        <div id="ataqueErrPika"></div>
-                        <button onclick="ataqueErrSumaPika()">+</button>
-                    </div>
-                </div>
-            </div>
-            <div class="contenedor-row-btw margin-1">
-                <div class="basis-33">Punto de ataque</div>
-                <div class="basis-66">
-                    <div class="basis-33 contenedor-row-arn">
-                        <button onclick="ataquePuntoRestaPika()">-</button>
-                        <div id="ataquePuntoPika"></div>
-                        <button onclick="ataquePuntoSumaPika()">+</button>
-                    </div>
-                </div>
-            </div>
-        </section>
-<!--MATI-->
-    <!--SAQUE MATI-->
-    <section id="mati" style="display:none">
-        <div class="contenedor-row">
-            <h1 class="txt-center">Mati</h1>
-        </div>
-    <div class="contenedor-row-btw margin-1">
-        <div class="basis-33">Saque</div>
-        <div class="basis-66">
-            <div class="basis-33 contenedor-row-arn">
-                <button onclick="saqueDentroRestaMati()">-</button>
-                <div id="saqueDentroMati"></div>
-                <button onclick="saqueDentroSumaMati()">+</button>
-            </div>
-        </div>
-    </div>
-    <div class="contenedor-row-btw margin-1">
-        <div class="basis-33">Saque errado</div>
-        <div class="basis-66">    
-            <div class="basis-33 contenedor-row-arn">
-                <button onclick="saqueFueraRestaMati()">-</button>
-                <div id="saqueFueraMati"></div>
-                <button onclick="saqueFueraSumaMati()">+</button>
-            </div>
-        </div>
-    </div>
-    <div class="contenedor-row-btw margin-1">
-        <div class="basis-33">ACE</div>
-        <div class="basis-66">
-            <div class="basis-33 contenedor-row-arn">
-                <button onclick="aceRestaMati()">-</button>
-                <div id="aceMati"></div>
-                <button onclick="aceSumaMati()">+</button>
-            </div>
-        </div>
-    </div>
-<!--ATAQUE MATI-->
-    <div class="contenedor-row-btw margin-1">
-        <div class="basis-33">Ataque</div>
-        <div class="basis-66">
-            <div class="basis-33 contenedor-row-arn">
-                <button onclick="ataqueRestaMati()">-</button>
-                <div id="ataqueMati"></div>
-                <button onclick="ataqueSumaMati()">+</button>
-            </div>
-        </div>
-    </div>
-    <div class="contenedor-row-btw margin-1">
-        <div class="basis-33">Ataque errado</div>
-        <div class="basis-66">
-            <div class="basis-33 contenedor-row-arn">
-                <button onclick="ataqueErrRestaMati()">-</button>
-                <div id="ataqueErrMati"></div>
-                <button onclick="ataqueErrSumaMati()">+</button>
-            </div>
-        </div>
-    </div>
-    <div class="contenedor-row-btw margin-1">
-        <div class="basis-33">Punto de ataque</div>
-        <div class="basis-66">
-            <div class="basis-33 contenedor-row-arn">
-                <button onclick="ataquePuntoRestaMati()">-</button>
-                <div id="ataquePuntoMati"></div>
-                <button onclick="ataquePuntoSumaMati()">+</button>
-            </div>
-        </div>
-    </div>
-    <!--RECEPCION MATI-->
-    <div class="contenedor-row-btw margin-1">
-        <div class="basis-33">A</div>
-        <div class="basis-66">
-            <div class="basis-33 contenedor-row-arn">
-                <button onclick="recepcionARestaMati()">-</button>
-                <div id="recepcionAMati"></div>
-                <button onclick="recepcionASumaMati()">+</button>
-            </div>
-        </div>
-    </div>
-    <div class="contenedor-row margin-1">
-        <div class="basis-33">B</div>
-        <div class="basis-66">
-            <div class="basis-33 contenedor-row-arn">
-                <button onclick="recepcionBRestaMati()">-</button>
-                <div id="recepcionBMati"></div>
-                <button onclick="recepcionBSumaMati()">+</button>
-            </div>
-        </div>
-    </div>
-    <div class="contenedor-row margin-1">
-        <div class="basis-33">C</div>
-        <div class="basis-66">
-            <div class="basis-33 contenedor-row-arn">
-                <button onclick="recepcionCRestaMati()">-</button>
-                <div id="recepcionCMati"></div>
-                <button onclick="recepcionCSumaMati()">+</button>
-            </div>
-        </div>
-    </div>
-    <div class="contenedor-row-btw margin-1">
-        <div class="basis-33">D</div>
-        <div class="basis-66">
-            <div class="basis-33 contenedor-row-arn">
-                <button onclick="recepcionDRestaMati()">-</button>
-                <div id="recepcionDMati"></div>
-                <button onclick="recepcionDSumaMati()">+</button>
-            </div>
-        </div>
-    </div>
-</section>
-<!--GUSTI-->
-    <!--SAQUE GUSTI-->
-    <section id="gusti" style="display:none">
-        <div class="contenedor-row">
-            <h1 class="txt-center">Gusti</h1>
-        </div>
-    <div class="contenedor-row margin-1">
-        <div class="basis-33">Saque</div>
-        <div class="basis-66">
-            <div class="basis-33 contenedor-row-arn">
-                <button onclick="saqueDentroRestaGusti()">-</button>
-                <div id="saqueDentroGusti"></div>
-                <button onclick="saqueDentroSumaGusti()">+</button>
-            </div>
-        </div>
-    </div>
-    <div class="contenedor-row margin-1">
-        <div class="basis-33">Saque errado</div>
-        <div class="basis-66">    
-            <div class="basis-33 contenedor-row-arn">
-                <button onclick="saqueFueraRestaGusti()">-</button>
-                <div id="saqueFueraGusti"></div>
-                <button onclick="saqueFueraSumaGusti()">+</button>
-            </div>
-        </div>
-    </div>
-    <div class="contenedor-row margin-1">
-        <div class="basis-33">ACE</div>
-        <div class="basis-66">
-            <div class="basis-33 contenedor-row-arn">
-                <button onclick="aceRestaGusti()">-</button>
-                <div id="aceGusti"></div>
-                <button onclick="aceSumaGusti()">+</button>
-            </div>
-        </div>
-    </div>
-<!--ATAQUE GUSTI-->
-    <div class="contenedor-row margin-1">
-        <div class="basis-33">Ataque</div>
-        <div class="basis-66">
-            <div class="basis-33 contenedor-row-arn">
-                <button onclick="ataqueRestaGusti()">-</button>
-                <div id="ataqueGusti"></div>
-                <button onclick="ataqueSumaGusti()">+</button>
-            </div>
-        </div>
-    </div>
-    <div class="contenedor-row margin-1">
-        <div class="basis-33">Ataque errado</div>
-        <div class="basis-66">
-            <div class="basis-33 contenedor-row-arn">
-                <button onclick="ataqueErrRestaGusti()">-</button>
-                <div id="ataqueErrGusti"></div>
-                <button onclick="ataqueErrSumaGusti()">+</button>
-            </div>
-        </div>
-    </div>
-    <div class="contenedor-row margin-1">
-        <div class="basis-33">Punto de ataque</div>
-        <div class="basis-66">
-            <div class="basis-33 contenedor-row-arn">
-                <button onclick="ataquePuntoRestaGusti()">-</button>
-                <div id="ataquePuntoGusti"></div>
-                <button onclick="ataquePuntoSumaGusti()">+</button>
-            </div>
-        </div>
-    </div>
-    <!--RECEPCION GUSTI-->
-    <div class="contenedor-row margin-1">
-        <div class="basis-33">A</div>
-        <div class="basis-66">
-            <div class="basis-33 contenedor-row-arn">
-                <button onclick="recepcionARestaGusti()">-</button>
-                <div id="recepcionAGusti"></div>
-                <button onclick="recepcionASumaGusti()">+</button>
-            </div>
-        </div>
-    </div>
-    <div class="contenedor-row margin-1">
-        <div class="basis-33">B</div>
-        <div class="basis-66">
-            <div class="basis-33 contenedor-row-arn">
-                <button onclick="recepcionBRestaGusti()">-</button>
-                <div id="recepcionBGusti"></div>
-                <button onclick="recepcionBSumaGusti()">+</button>
-            </div>
-        </div>
-    </div>
-    <div class="contenedor-row margin-1">
-        <div class="basis-33">C</div>
-        <div class="basis-66">
-            <div class="basis-33 contenedor-row-arn">
-                <button onclick="recepcionCRestaGusti()">-</button>
-                <div id="recepcionCGusti"></div>
-                <button onclick="recepcionCSumaGusti()">+</button>
-            </div>
-        </div>
-    </div>
-    <div class="contenedor-row margin-1">
-        <div class="basis-33">D</div>
-        <div class="basis-66">
-            <div class="basis-33 contenedor-row-arn">
-                <button onclick="recepcionDRestaGusti()">-</button>
-                <div id="recepcionDGusti"></div>
-                <button onclick="recepcionDSumaGusti()">+</button>
-            </div>
-        </div>
-    </div>
-</section>
-<!--HERNAN-->
-    <!--SAQUE HERNAN-->
-    <section id="hernan" style="display:none">
-        <div class="contenedor-row">
-            <h1 class="txt-center">Hernan</h1>
-        </div>
-    <div class="contenedor-row margin-1">
-        <div class="basis-33">Saque</div>
-        <div class="basis-66">
-            <div class="basis-33 contenedor-row-arn">
-                <button onclick="saqueDentroRestaHernan()">-</button>
-                <div id="saqueDentroHernan"></div>
-                <button onclick="saqueDentroSumaHernan()">+</button>
-            </div>
-        </div>
-    </div>
-    <div class="contenedor-row margin-1">
-        <div class="basis-33">Saque errado</div>
-        <div class="basis-66">    
-            <div class="basis-33 contenedor-row-arn">
-                <button onclick="saqueFueraRestaHernan()">-</button>
-                <div id="saqueFueraHernan"></div>
-                <button onclick="saqueFueraSumaHernan()">+</button>
-            </div>
-        </div>
-    </div>
-    <div class="contenedor-row margin-1">
-        <div class="basis-33">ACE</div>
-        <div class="basis-66">
-            <div class="basis-33 contenedor-row-arn">
-                <button onclick="aceRestaHernan()">-</button>
-                <div id="aceHernan"></div>
-                <button onclick="aceSumaHernan()">+</button>
-            </div>
-        </div>
-    </div>
-<!--ATAQUE HERNAN-->
-    <div class="contenedor-row margin-1">
-        <div class="basis-33">Ataque</div>
-        <div class="basis-66">
-            <div class="basis-33 contenedor-row-arn">
-                <button onclick="ataqueRestaHernan()">-</button>
-                <div id="ataqueHernan"></div>
-                <button onclick="ataqueSumaHernan()">+</button>
-            </div>
-        </div>
-    </div>
-    <div class="contenedor-row margin-1">
-        <div class="basis-33">Ataque errado</div>
-        <div class="basis-66">
-            <div class="basis-33 contenedor-row-arn">
-                <button onclick="ataqueErrRestaHernan()">-</button>
-                <div id="ataqueErrHernan"></div>
-                <button onclick="ataqueErrSumaHernan()">+</button>
-            </div>
-        </div>
-    </div>
-    <div class="contenedor-row margin-1">
-        <div class="basis-33">Punto de ataque</div>
-        <div class="basis-66">
-            <div class="basis-33 contenedor-row-arn">
-                <button onclick="ataquePuntoRestaHernan()">-</button>
-                <div id="ataquePuntoHernan"></div>
-                <button onclick="ataquePuntoSumaHernan()">+</button>
-            </div>
-        </div>
-    </div>
-    <!--RECEPCION HERNAN-->
-    <div class="contenedor-row margin-1">
-        <div class="basis-33">A</div>
-        <div class="basis-66">
-            <div class="basis-33 contenedor-row-arn">
-                <button onclick="recepcionARestaHernan()">-</button>
-                <div id="recepcionAHernan"></div>
-                <button onclick="recepcionASumaHernan()">+</button>
-            </div>
-        </div>
-    </div>
-    <div class="contenedor-row margin-1">
-        <div class="basis-33">B</div>
-        <div class="basis-66">
-            <div class="basis-33 contenedor-row-arn">
-                <button onclick="recepcionBRestaHernan()">-</button>
-                <div id="recepcionBHernan"></div>
-                <button onclick="recepcionBSumaHernan()">+</button>
-            </div>
-        </div>
-    </div>
-    <div class="contenedor-row margin-1">
-        <div class="basis-33">C</div>
-        <div class="basis-66">
-            <div class="basis-33 contenedor-row-arn">
-                <button onclick="recepcionCRestaHernan()">-</button>
-                <div id="recepcionCHernan"></div>
-                <button onclick="recepcionCSumaHernan()">+</button>
-            </div>
-        </div>
-    </div>
-    <div class="contenedor-row margin-1">
-        <div class="basis-33">D</div>
-        <div class="basis-66">
-            <div class="basis-33 contenedor-row-arn">
-                <button onclick="recepcionDRestaHernan()">-</button>
-                <div id="recepcionDHernan"></div>
-                <button onclick="recepcionDSumaHernan()">+</button>
-            </div>
-        </div>
-    </div>
-</section>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planificador de Entrenamientos de Fútbol</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        
+        body {
+            background-color: #f0f0f0;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 30px;
+        }
+        
+        .welcome-screen {
+            padding: 40px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            background-color: #27ae60;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            margin: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        .btn:hover {
+            background-color: #219653;
+        }
+        
+        .btn-secondary {
+            background-color: #3498db;
+        }
+        
+        .btn-secondary:hover {
+            background-color: #2980b9;
+        }
+        
+        .btn-danger {
+            background-color: #e74c3c;
+        }
+        
+        .btn-danger:hover {
+            background-color: #c0392b;
+        }
+        
+        .editor-screen {
+            display: none;
+        }
+        
+        .field-container {
+            position: relative;
+            width: 100%;
+            height: 70vh;
+            background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA4MDAgNTAwIj48ZGVmcz48cGF0dGVybiBpZD0iZ3Jhc3MiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiIHdpZHRoPSIxMCIgaGVpZ2h0PSIxMCI+PHJlY3Qgd2lkdGg9IjEwIiBoZWlnaHQ9IjEwIiBmaWxsPSIjMzhjNzU5Ii8+PHBhdGggZD0iTTAgMEwxMCAxME0xMCAwTDAgMTAiIHN0cm9rZT0iIzQyZDg2MCIgc3Ryb2tlLXdpZHRoPSIwLjUiLz48L3BhdHRlcm4+PC9kZWZzPjxyZWN0IHdpZHRoPSI4MDAiIGhlaWdodD0iNTAwIiBmaWxsPSJ1cmwoI2dyYXNzKSIvPjxyZWN0IHg9IjQwIiB5PSI0MCIgd2lkdGg9IjcyMCIgaGVpZ2h0PSI0MjAiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iMyIgZmlsbD0ibm9uZSIvPjxjaXJjbGUgY3g9IjQwMCIgY3k9IjI1MCIgcj0iNjAiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iMyIgZmlsbD0ibm9uZSIvPjxsaW5lIHgxPSI0MDAiIHkxPSI0MCIgeDI9IjQwMCIgeTI9IjQ2MCIgc3Ryb2tlPSJ3aGl0ZSIgc3Ryb2tlLXdpZHRoPSIzIi8+PHJlY3QgeD0iNDAiIHk9IjE3NSIgd2lkdGg9IjEwMCIgaGVpZ2h0PSIxNTAiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iMyIgZmlsbD0ibm9uZSIvPjxyZWN0IHg9IjY2MCIgeT0iMTc1IiB3aWR0aD0iMTAwIiBoZWlnaHQ9IjE1MCIgc3Ryb2tlPSJ3aGl0ZSIgc3Ryb2tlLXdpZHRoPSIzIiBmaWxsPSJub25lIi8+PHJlY3QgeD0iNDAiIHk9IjIwMCIgd2lkdGg9IjQwIiBoZWlnaHQ9IjEwMCIgc3Ryb2tlPSJ3aGl0ZSIgc3Ryb2tlLXdpZHRoPSIzIiBmaWxsPSJub25lIi8+PHJlY3QgeD0iNzIwIiB5PSIyMDAiIHdpZHRoPSI0MCIgaGVpZ2h0PSIxMDAiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iMyIgZmlsbD0ibm9uZSIvPjxjaXJjbGUgY3g9IjExMCIgY3k9IjI1MCIgcj0iMyIgZmlsbD0id2hpdGUiLz48Y2lyY2xlIGN4PSI2OTAiIGN5PSIyNTAiIHI9IjMiIGZpbGw9IndoaXRlIi8+PC9zdmc+');
+            background-size: cover;
+            background-position: center;
+            border: 3px solid #2c3e50;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            overflow: hidden;
+        }
+        
+        .tools-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 20px;
+            padding: 10px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        
+        .tool {
+            width: 50px;
+            height: 50px;
+            cursor: grab;
+            user-select: none;
+        }
+        
+        .element {
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            cursor: move;
+            user-select: none;
+            z-index: 10;
+        }
+        
+        .controls {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        
+        .sequence-panel {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        
+        .sequence-tabs {
+            display: flex;
+            margin-bottom: 10px;
+            overflow-x: auto;
+            padding-bottom: 5px;
+        }
+        
+        .sequence-tab {
+            padding: 8px 15px;
+            background-color: #ecf0f1;
+            border: 1px solid #bdc3c7;
+            border-radius: 5px 5px 0 0;
+            margin-right: 5px;
+            cursor: pointer;
+        }
+        
+        .sequence-tab.active {
+            background-color: #3498db;
+            color: white;
+            border-color: #2980b9;
+        }
+        .sequence-log {
+        margin-top: 15px;
+        padding: 10px;
+        background-color: #f8f9fa;
+        border: 1px solid #dee2e6;
+        border-radius: 5px;
+        max-height: 150px;
+        overflow-y: auto;
+        font-size: 0.9em;
+        }
 
-<!--EMI-->
-    <!--SAQUE EMI-->
-    <section id="emi" style="display:none">
-        <div class="contenedor-row">
-            <h1 class="txt-center">Emi</h1>
-        </div>
-    <div class="contenedor-row margin-1">
-        <div class="basis-33">Saque</div>
-        <div class="basis-66">
-            <div class="basis-33 contenedor-row-arn">
-                <button onclick="saqueDentroRestaEmi()">-</button>
-                <div id="saqueDentroEmi"></div>
-                <button onclick="saqueDentroSumaEmi()">+</button>
-            </div>
-        </div>
-    </div>
-    <div class="contenedor-row margin-1">
-        <div class="basis-33">Saque errado</div>
-        <div class="basis-66">    
-            <div class="basis-33 contenedor-row-arn">
-                <button onclick="saqueFueraRestaEmi()">-</button>
-                <div id="saqueFueraEmi"></div>
-                <button onclick="saqueFueraSumaEmi()">+</button>
-            </div>
-        </div>
-    </div>
-    <div class="contenedor-row margin-1">
-        <div class="basis-33">ACE</div>
-        <div class="basis-66">
-            <div class="basis-33 contenedor-row-arn">
-                <button onclick="aceRestaEmi()">-</button>
-                <div id="aceEmi"></div>
-                <button onclick="aceSumaEmi()">+</button>
-            </div>
-        </div>
-    </div>
-<!--ATAQUE EMI-->
-    <div class="contenedor-row margin-1">
-        <div class="basis-33">Ataque</div>
-        <div class="basis-66">
-            <div class="basis-33 contenedor-row-arn">
-                <button onclick="ataqueRestaEmi()">-</button>
-                <div id="ataqueEmi"></div>
-                <button onclick="ataqueSumaEmi()">+</button>
-            </div>
-        </div>
-    </div>
-    <div class="contenedor-row margin-1">
-        <div class="basis-33">Ataque errado</div>
-        <div class="basis-66">
-            <div class="basis-33 contenedor-row-arn">
-                <button onclick="ataqueErrRestaEmi()">-</button>
-                <div id="ataqueErrEmi"></div>
-                <button onclick="ataqueErrSumaEmi()">+</button>
-            </div>
-        </div>
-    </div>
-    <div class="contenedor-row margin-1">
-        <div class="basis-33">Punto de ataque</div>
-        <div class="basis-66">
-            <div class="basis-33 contenedor-row-arn">
-                <button onclick="ataquePuntoRestaEmi()">-</button>
-                <div id="ataquePuntoEmi"></div>
-                <button onclick="ataquePuntoSumaEmi()">+</button>
-            </div>
-        </div>
-    </div>
-    <!--RECEPCION EMI-->
-    <div class="contenedor-row margin-1">
-        <div class="basis-33">A</div>
-        <div class="basis-66">
-            <div class="basis-33 contenedor-row-arn">
-                <button onclick="recepcionARestaEmi()">-</button>
-                <div id="recepcionAEmi"></div>
-                <button onclick="recepcionASumaEmi()">+</button>
-            </div>
-        </div>
-    </div>
-    <div class="contenedor-row margin-1">
-        <div class="basis-33">B</div>
-        <div class="basis-66">
-            <div class="basis-33 contenedor-row-arn">
-                <button onclick="recepcionBRestaEmi()">-</button>
-                <div id="recepcionBEmi"></div>
-                <button onclick="recepcionBSumaEmi()">+</button>
-            </div>
-        </div>
-    </div>
-    <div class="contenedor-row margin-1">
-        <div class="basis-33">C</div>
-        <div class="basis-66">
-            <div class="basis-33 contenedor-row-arn">
-                <button onclick="recepcionCRestaEmi()">-</button>
-                <div id="recepcionCEmi"></div>
-                <button onclick="recepcionCSumaEmi()">+</button>
-            </div>
-        </div>
-    </div>
-    <div class="contenedor-row margin-1">
-        <div class="basis-33">D</div>
-        <div class="basis-66">
-            <div class="basis-33 contenedor-row-arn">
-                <button onclick="recepcionDRestaEmi()">-</button>
-                <div id="recepcionDEmi"></div>
-                <button onclick="recepcionDSumaEmi()">+</button>
-            </div>
-        </div>
-    </div>
-</section>
+        .log-entry {
+            padding: 5px;
+            margin: 3px 0;
+            background-color: #e9ecef;
+            border-radius: 3px;
+        }
 
-<!--FAUSTO-->
-    <!--SAQUE FAUSTO-->
-    <section id="fausto" style="display:none">
-        <div class="contenedor-row">
-            <h1 class="txt-center">Fausto</h1>
+        .current-sequence {
+            background-color: #cfe2ff;
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            z-index: 100;
+            justify-content: center;
+            align-items: center;
+        }
+            
+        .modal-content {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 500px;
+            width: 80%;
+        }
+        
+        .modal h2 {
+            margin-bottom: 15px;
+        }
+        
+        .saved-activities {
+            text-align: left;
+            margin: 15px 0;
+            max-height: 300px;
+            overflow-y: auto;
+        }
+        
+        .activity-item {
+            padding: 10px;
+            border: 1px solid #ddd;
+            margin-bottom: 5px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        
+        .activity-item:hover {
+            background-color: #f5f5f5;
+        }
+        
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="welcome-screen" id="welcomeScreen">
+            <h1>Planificador de Entrenamientos de Fútbol</h1>
+            <p>Crea y guarda tus rutinas de entrenamiento de forma visual</p>
+            <button class="btn" id="btnNewActivity">Comenzar Actividad</button>
+            <button class="btn btn-secondary" id="btnLoadActivity">Cargar Actividad Anterior</button>
         </div>
-    <div class="contenedor-row margin-1">
-        <div class="basis-33">Saque</div> 
-        <div class="basis-66">
-            <div class="basis-33 contenedor-row-arn">
-                <button onclick="saqueDentroRestaFausto()">-</button>
-                <div id="saqueDentroFausto"></div>
-                <button onclick="saqueDentroSumaFausto()">+</button>
+        
+        <div class="editor-screen" id="editorScreen">
+            <h1>Editor de Actividades</h1>
+            
+            <div class="tools-container">
+                <img src="C:\Users\Emanuel\OneDrive\Desktop\App clases de futbol\pelota.png" class="tool" data-type="ball" alt="Pelota">
+                <img src="C:\Users\Emanuel\OneDrive\Desktop\App clases de futbol\cono.png" class="tool" data-type="cone" alt="Cono">
+                <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MCA1MCI+PGNpcmNsZSBjeD0iMjUiIGN5PSIxNSIgcj0iMTAiIGZpbGw9IiMzNDk4ZGIiLz48cGF0aCBkPSJNMjUgMjVjLTcuNSAwLTE1IDMtMTUgOHYxMmgzMFYzM2MwLTUtNy41LTgtMTUtOHoiIGZpbGw9IiMzNDk4ZGIiLz48L3N2Zz4=" class="tool" data-type="player" alt="Jugador">
+                <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MCA1MCI+PGNpcmNsZSBjeD0iMjUiIGN5PSIxNSIgcj0iMTAiIGZpbGw9IiNlNzRjM2MiLz48cGF0aCBkPSJNMjUgMjVjLTcuNSAwLTE1IDMtMTUgOHYxMmgzMFYzM2MwLTUtNy41LTgtMTUtOHoiIGZpbGw9IiNlNzRjM2MiLz48L3N2Zz4=" class="tool" data-type="player2" alt="Jugador 2">
+                <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MCA1MCI+PHJlY3QgeD0iMTAiIHk9IjEwIiB3aWR0aD0iMzAiIGhlaWdodD0iMzAiIGZpbGw9IiMyN2FlNjAiLz48L3N2Zz4=" class="tool" data-type="marker" alt="Marcador">
+            </div>
+            
+            <div class="field-container" id="fieldContainer"></div>
+            
+            <div class="controls">
+                <button class="btn" id="btnAddSequence">Nueva Secuencia</button>
+                <button class="btn btn-secondary" id="btnPlaySequence">Reproducir Secuencias</button>
+                <button class="btn" id="btnSaveActivity">Guardar Actividad</button>
+                <button class="btn btn-danger" id="btnBackToMenu">Volver al Menú</button>
+                <button class="btn btn-danger" id="btnDeleteSequence">Eliminar Secuencia</button>
+            </div>
+            
+            <div class="sequence-panel">
+                <h3>Secuencias</h3>
+                <div class="sequence-tabs" id="sequenceTabs">
+                    <div class="sequence-tab active" data-sequence="1">Secuencia 1</div>
+                </div>
+                <div class="sequence-log" id="sequenceLog">
+                    <div class="log-entry current-sequence">Secuencia 1: Edición actual</div>
+                </div>
             </div>
         </div>
     </div>
-    <div class="contenedor-row margin-1">
-        <div class="basis-33">Saque errado</div>
-        <div class="basis-66">    
-            <div class="basis-33 contenedor-row-arn">
-                <button onclick="saqueFueraRestaFausto()">-</button>
-                <div id="saqueFueraFausto"></div>
-                <button onclick="saqueFueraSumaFausto()">+</button>
+    
+    <!-- Modal para guardar actividad -->
+    <div class="modal" id="saveModal">
+        <div class="modal-content">
+            <h2>Guardar Actividad</h2>
+            <input type="text" id="activityName" placeholder="Nombre de la actividad">
+            <div class="controls">
+                <button class="btn" id="btnConfirmSave">Guardar</button>
+                <button class="btn btn-danger" id="btnCancelSave">Cancelar</button>
             </div>
         </div>
     </div>
-    <div class="contenedor-row margin-1">
-        <div class="basis-33">ACE</div>
-        <div class="basis-66">
-            <div class="basis-33 contenedor-row-arn">
-                <button onclick="aceRestaFausto()">-</button>
-                <div id="aceFausto"></div>
-                <button onclick="aceSumaFausto()">+</button>
+    
+    <!-- Modal para cargar actividad -->
+    <div class="modal" id="loadModal">
+        <div class="modal-content">
+            <h2>Cargar Actividad</h2>
+            <div class="saved-activities" id="savedActivitiesList">
+                <!-- Las actividades guardadas se cargarán aquí -->
+            </div>
+            <div class="controls">
+                <button class="btn btn-danger" id="btnCancelLoad">Cancelar</button>
             </div>
         </div>
     </div>
-<!--ATAQUE FAUSTO-->
-    <div class="contenedor-row margin-1">
-        <div class="basis-33">Ataque</div>
-        <div class="basis-66">
-            <div class="basis-33 contenedor-row-arn">
-                <button onclick="ataqueRestaFausto()">-</button>
-                <div id="ataqueFausto"></div>
-                <button onclick="ataqueSumaFausto()">+</button>
-            </div>
-        </div>
-    </div>
-    <div class="contenedor-row margin-1">
-        <div class="basis-33">Ataque errado</div>
-        <div class="basis-66">
-            <div class="basis-33 contenedor-row-arn">
-                <button onclick="ataqueErrRestaFausto()">-</button>
-                <div id="ataqueErrFausto"></div>
-                <button onclick="ataqueErrSumaFausto()">+</button>
-            </div>
-        </div>
-    </div>
-    <div class="contenedor-row margin-1">
-        <div class="basis-33">Punto de ataque</div>
-        <div class="basis-66">
-            <div class="basis-33 contenedor-row-arn">
-                <button onclick="ataquePuntoRestaFausto()">-</button>
-                <div id="ataquePuntoFausto"></div>
-                <button onclick="ataquePuntoSumaFausto()">+</button>
-            </div>
-        </div>
-    </div>
-    <!--RECEPCION FAUSTO-->
-    <div class="contenedor-row margin-1">
-        <div class="basis-33">A</div>
-        <div class="basis-66">
-            <div class="basis-33 contenedor-row-arn">
-                <button onclick="recepcionARestaFausto()">-</button>
-                <div id="recepcionAFausto"></div>
-                <button onclick="recepcionASumaFausto()">+</button>
-            </div>
-        </div>
-    </div>
-    <div class="contenedor-row margin-1">
-        <div class="basis-33">B</div>
-        <div class="basis-66">
-            <div class="basis-33 contenedor-row-arn">
-                <button onclick="recepcionBRestaFausto()">-</button>
-                <div id="recepcionBFausto"></div>
-                <button onclick="recepcionBSumaFausto()">+</button>
-            </div>
-        </div>
-    </div>
-    <div class="contenedor-row margin-1">
-        <div class="basis-33">C</div>
-        <div class="basis-66">
-            <div class="basis-33 contenedor-row-arn">
-                <button onclick="recepcionCRestaFausto()">-</button>
-                <div id="recepcionCFausto"></div>
-                <button onclick="recepcionCSumaFausto()">+</button>
-            </div>
-        </div>
-    </div>
-    <div class="contenedor-row margin-1">
-        <div class="basis-33">D</div>
-        <div class="basis-66">
-            <div class="basis-33 contenedor-row-arn">
-                <button onclick="recepcionDRestaFausto()">-</button>
-                <div id="recepcionDFausto"></div>
-                <button onclick="recepcionDSumaFausto()">+</button>
-            </div>
-        </div>
-    </div>
-</section>
+    
+    <script>
+        // Variables globales
+        let currentSequence = 1;
+        let sequences = {
+            1: { elements: {} }
+        };
+        let elements = [];
+        let elementCounter = 0;
+        let isDragging = false;
+        let selectedElement = null;
+        let selectedElementId = null;
+        let offsetX, offsetY;
+        let isAnimating = false;
+        
+        // DOM Elements
+        const welcomeScreen = document.getElementById('welcomeScreen');
+        const editorScreen = document.getElementById('editorScreen');
+        const fieldContainer = document.getElementById('fieldContainer');
+        const sequenceTabs = document.getElementById('sequenceTabs');
+        const saveModal = document.getElementById('saveModal');
+        const loadModal = document.getElementById('loadModal');
+        const savedActivitiesList = document.getElementById('savedActivitiesList');
+        
+        // Inicialización
+        document.addEventListener('DOMContentLoaded', () => {
+            // Eventos para pantalla de bienvenida
+            document.getElementById('btnNewActivity').addEventListener('click', startNewActivity);
+            document.getElementById('btnLoadActivity').addEventListener('click', showLoadModal);
+            document.getElementById('btnDeleteSequence').addEventListener('click', deleteSequence);
+            
+            // Eventos para editor
+            document.getElementById('btnAddSequence').addEventListener('click', addSequence);
+            document.getElementById('btnPlaySequence').addEventListener('click', playAllSequences);
+            document.getElementById('btnSaveActivity').addEventListener('click', showSaveModal);
+            document.getElementById('btnBackToMenu').addEventListener('click', backToMenu);
+            
+            // Eventos para modales
+            document.getElementById('btnConfirmSave').addEventListener('click', saveActivity);
+            document.getElementById('btnCancelSave').addEventListener('click', () => saveModal.style.display = 'none');
+            document.getElementById('btnCancelLoad').addEventListener('click', () => loadModal.style.display = 'none');
+            
+            // Eventos para herramientas
+            document.querySelectorAll('.tool').forEach(tool => {
+                tool.addEventListener('mousedown', (e) => {
+                    e.preventDefault();
+                    createDraggableElement(e.target.dataset.type);
+                });
+            });
+            
+            // Configurar eventos de arrastre para el campo
+            setupFieldDragEvents();
+        });
+        
+        // Función para iniciar una nueva actividad
+        function startNewActivity() {
+            welcomeScreen.style.display = 'none';
+            editorScreen.style.display = 'block';
+            resetEditor();
+        }
+        
+        // Función para mostrar modal de carga
+        function showLoadModal() {
+            loadSavedActivities();
+            loadModal.style.display = 'flex';
+        }
+        
+        // Función para cargar actividades guardadas
+        function loadSavedActivities() {
+            savedActivitiesList.innerHTML = '';
+            
+            try {
+                const savedActivities = JSON.parse(localStorage.getItem('soccerActivities')) || {};
+                
+                if (Object.keys(savedActivities).length === 0) {
+                    savedActivitiesList.innerHTML = '<p>No hay actividades guardadas.</p>';
+                    return;
+                }
+                
+                for (const [name, activity] of Object.entries(savedActivities)) {
+                    const activityItem = document.createElement('div');
+                    activityItem.className = 'activity-item';
+                    activityItem.textContent = name;
+                    activityItem.addEventListener('click', () => loadActivity(name, activity));
+                    savedActivitiesList.appendChild(activityItem);
+                }
+            } catch (error) {
+                console.error('Error al cargar actividades:', error);
+                savedActivitiesList.innerHTML = '<p>Error al cargar actividades guardadas.</p>';
+            }
+        }
+        
+        // Función para cargar una actividad
+        function loadActivity(name, activity) {
+            resetEditor();
+            
+            // Cargar elementos
+            activity.elements.forEach(el => {
+                const element = createDraggableElement(el.type, el.id);
+                element.style.left = el.x + 'px';
+                element.style.top = el.y + 'px';
+            });
+            
+            // Cargar secuencias
+            sequences = activity.sequences;
+            currentSequence = 1;
+            
+            // Recrear pestañas de secuencias
+            sequenceTabs.innerHTML = '';
+            for (let i = 1; i <= Object.keys(sequences).length; i++) {
+                const tab = document.createElement('div');
+                tab.className = 'sequence-tab' + (i === 1 ? ' active' : '');
+                tab.textContent = `Secuencia ${i}`;
+                tab.dataset.sequence = i;
+                tab.addEventListener('click', () => changeSequence(i));
+                sequenceTabs.appendChild(tab);
+            }
+            
+            // Cerrar modal y mostrar editor
+            loadModal.style.display = 'none';
+            welcomeScreen.style.display = 'none';
+            editorScreen.style.display = 'block';
+        }
+        
+        // Función para mostrar modal de guardado
+        function showSaveModal() {
+            saveModal.style.display = 'flex';
+        }
+        
+        // Función para guardar actividad
+        function saveActivity() {
+            const activityName = document.getElementById('activityName').value.trim();
+            
+            if (!activityName) {
+                alert('Por favor, introduce un nombre para la actividad.');
+                return;
+            }
+            
+            // Preparar datos para guardar
+            const elementsData = elements.map(el => {
+                const element = document.getElementById(el.id);
+                return {
+                    id: el.id,
+                    type: el.type,
+                    x: parseInt(element.style.left),
+                    y: parseInt(element.style.top)
+                };
+            });
+            
+            const activityData = {
+                elements: elementsData,
+                sequences: sequences
+            };
+            
+            try {
+                // Guardar en localStorage
+                const savedActivities = JSON.parse(localStorage.getItem('soccerActivities')) || {};
+                savedActivities[activityName] = activityData;
+                localStorage.setItem('soccerActivities', JSON.stringify(savedActivities));
+                
+                alert(`Actividad "${activityName}" guardada correctamente.`);
+                saveModal.style.display = 'none';
+            } catch (error) {
+                console.error('Error al guardar:', error);
+                alert('Error al guardar la actividad. Inténtalo de nuevo.');
+            }
+        }
+        
+        // Función para volver al menú principal
+        function backToMenu() {
+            if (confirm('¿Estás seguro de volver al menú? Se perderán los cambios no guardados.')) {
+                editorScreen.style.display = 'none';
+                welcomeScreen.style.display = 'block';
+            }
+        }
+        
+        // Función para crear un elemento arrastrable
+        function createDraggableElement(type, customId = null) {
+            const id = customId || `element-${++elementCounter}`;
+            
+            const element = document.createElement('img');
+            element.className = 'element';
+            element.id = id;
+            element.dataset.type = type;
+            
+            // Establecer imagen según el tipo
+            switch (type) {
+                case 'ball':
+                    element.src = "C:/Users/Emanuel/OneDrive/Desktop/App clases de futbol/pelota.png";
+                    break;
+                case 'cone':
+                    element.src = "C:/Users/Emanuel/OneDrive/Desktop/App clases de futbol/cono.png";
+                    break;
+                case 'player':
+                    element.src = 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MCA1MCI+PGNpcmNsZSBjeD0iMjUiIGN5PSIxNSIgcj0iMTAiIGZpbGw9IiMzNDk4ZGIiLz48cGF0aCBkPSJNMjUgMjVjLTcuNSAwLTE1IDMtMTUgOHYxMmgzMFYzM2MwLTUtNy41LTgtMTUtOHoiIGZpbGw9IiMzNDk4ZGIiLz48L3N2Zz4=';
+                    break;
+                case 'player2':
+                    element.src = 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MCA1MCI+PGNpcmNsZSBjeD0iMjUiIGN5PSIxNSIgcj0iMTAiIGZpbGw9IiNlNzRjM2MiLz48cGF0aCBkPSJNMjUgMjVjLTcuNSAwLTE1IDMtMTUgOHYxMmgzMFYzM2MwLTUtNy41LTgtMTUtOHoiIGZpbGw9IiNlNzRjM2MiLz48L3N2Zz4=';
+                    break;
+                case 'marker':
+                    element.src = 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MCA1MCI+PHJlY3QgeD0iMTAiIHk9IjEwIiB3aWR0aD0iMzAiIGhlaWdodD0iMzAiIGZpbGw9IiMyN2FlNjAiLz48L3N2Zz4=';
+                    break;
+            }
 
-<!--SANTI-->
-    <!--SAQUE SANTI-->
-    <section id="santi" style="display:none">
-        <div class="contenedor-row">
-            <h1 class="txt-center">Santi</h1>
-        </div>
-    <div class="contenedor-row margin-1">
-        <div class="basis-33">Saque</div>
-        <div class="basis-66">
-            <div class="basis-33 contenedor-row-arn">
-                <button onclick="saqueDentroRestaSanti()">-</button>
-                <div id="saqueDentroSanti"></div>
-                <button onclick="saqueDentroSumaSanti()">+</button>
-            </div>
-        </div>
-    </div>
-    <div class="contenedor-row margin-1">
-        <div class="basis-33">Saque errado</div>
-        <div class="basis-66">    
-            <div class="basis-33 contenedor-row-arn">
-                <button onclick="saqueFueraRestaSanti()">-</button>
-                <div id="saqueFueraSanti"></div>
-                <button onclick="saqueFueraSumaSanti()">+</button>
-            </div>
-        </div>
-    </div>
-    <div class="contenedor-row margin-1">
-        <div class="basis-33">ACE</div>
-        <div class="basis-66">
-            <div class="basis-33 contenedor-row-arn">
-                <button onclick="aceRestaSanti()">-</button>
-                <div id="aceSanti"></div>
-                <button onclick="aceSumaSanti()">+</button>
-            </div>
-        </div>
-    </div>
-<!--ATAQUE SANTI-->
-    <div class="contenedor-row margin-1">
-        <div class="basis-33">Ataque</div>
-        <div class="basis-66">
-            <div class="basis-33 contenedor-row-arn">
-                <button onclick="ataqueRestaSanti()">-</button>
-                <div id="ataqueSanti"></div>
-                <button onclick="ataqueSumaSanti()">+</button>
-            </div>
-        </div>
-    </div>
-    <div class="contenedor-row margin-1">
-        <div class="basis-33">Ataque errado</div>
-        <div class="basis-66">
-            <div class="basis-33 contenedor-row-arn">
-                <button onclick="ataqueErrRestaSanti()">-</button>
-                <div id="ataqueErrSanti"></div>
-                <button onclick="ataqueErrSumaSanti()">+</button>
-            </div>
-        </div>
-    </div>
-    <div class="contenedor-row margin-1">
-        <div class="basis-33">Punto de ataque</div>
-        <div class="basis-66">
-            <div class="basis-33 contenedor-row-arn">
-                <button onclick="ataquePuntoRestaSanti()">-</button>
-                <div id="ataquePuntoSanti"></div>
-                <button onclick="ataquePuntoSumaSanti()">+</button>
-            </div>
-        </div>
-    </div>
-</section>
+            element.style.position = 'absolute';
+            element.style.left = '0px';
+            element.style.top = '0px';
+            
+            elements.push({ id: id, type: type });
+            fieldContainer.appendChild(element);
+            return element;
+        }
 
-<!--MARTU-->
-    <!--SAQUE MARTU-->
-    <section id="martu" style="display:none">
-        <div class="contenedor-row">
-            <h1 class="txt-center">Martu</h1>
-        </div>
-    <div class="contenedor-row margin-1">
-        <div class="basis-33">Saque</div> 
-        <div class="basis-66">
-            <div class="basis-33 contenedor-row-arn">
-                <button onclick="saqueDentroRestaMartu ()">-</button>
-                <div id="saqueDentroMartu"></div>
-                <button onclick="saqueDentroSumaMartu ()">+</button>
-            </div>
-        </div>
-    </div>
-    <div class="contenedor-row margin-1">
-        <div class="basis-33">Saque errado</div>
-        <div class="basis-66">    
-            <div class="basis-33 contenedor-row-arn">
-                <button onclick="saqueFueraRestaMartu ()">-</button>
-                <div id="saqueFueraMartu"></div>
-                <button onclick="saqueFueraSumaMartu ()">+</button>
-            </div>
-        </div>
-    </div>
-    <div class="contenedor-row margin-1">
-        <div class="basis-33">ACE</div>
-        <div class="basis-66">
-            <div class="basis-33 contenedor-row-arn">
-                <button onclick="aceRestaMartu ()">-</button>
-                <div id="aceMartu"></div>
-                <button onclick="aceSumaMartu ()">+</button>
-            </div>
-        </div>
-    </div>
-<!--ATAQUE MARTU-->
-    <div class="contenedor-row margin-1">
-        <div class="basis-33">Ataque</div>
-        <div class="basis-66">
-            <div class="basis-33 contenedor-row-arn">
-                <button onclick="ataqueRestaMartu ()">-</button>
-                <div id="ataqueMartu"></div>
-                <button onclick="ataqueSumaMartu ()">+</button>
-            </div>
-        </div>
-    </div>
-    <div class="contenedor-row margin-1">
-        <div class="basis-33">Ataque errado</div>
-        <div class="basis-66">
-            <div class="basis-33 contenedor-row-arn">
-                <button onclick="ataqueErrRestaMartu ()">-</button>
-                <div id="ataqueErrMartu"></div>
-                <button onclick="ataqueErrSumaMartu ()">+</button>
-            </div>
-        </div>
-    </div>
-    <div class="contenedor-row margin-1">
-        <div class="basis-33">Punto de ataque</div>
-        <div class="basis-66">
-            <div class="basis-33 contenedor-row-arn">
-                <button onclick="ataquePuntoRestaMartu ()">-</button>
-                <div id="ataquePuntoMartu"></div>
-                <button onclick="ataquePuntoSumaMartu ()">+</button>
-            </div>
-        </div>
-    </div>
-</section>
+        // Configurar eventos de arrastre
+        function setupFieldDragEvents() {
+            fieldContainer.addEventListener('mousedown', startDragging);
+            document.addEventListener('mousemove', dragElement);
+            document.addEventListener('mouseup', stopDragging);
+        }
 
-<!--ELOY-->
-    <!--SAQUE ELOY-->
-    <section id="eloy" style="display:none">
-        <div class="contenedor-row">
-            <h1 class="txt-center">Eloy</h1>
-        </div>
-    <div class="contenedor-row margin-1">
-        <div class="basis-33">Saque</div> 
-        <div class="basis-66">
-            <div class="basis-33 contenedor-row-arn">
-                <button onclick="saqueDentroRestaEloy()">-</button>
-                <div id="saqueDentroEloy"></div>
-                <button onclick="saqueDentroSumaEloy()">+</button>
-            </div>
-        </div>
-    </div>
-    <div class="contenedor-row margin-1">
-        <div class="basis-33">Saque errado</div>
-        <div class="basis-66">    
-            <div class="basis-33 contenedor-row-arn">
-                <button onclick="saqueFueraRestaEloy()">-</button>
-                <div id="saqueFueraEloy"></div>
-                <button onclick="saqueFueraSumaEloy()">+</button>
-            </div>
-        </div>
-    </div>
-    <div class="contenedor-row margin-1">
-        <div class="basis-33">ACE</div>
-        <div class="basis-66">
-            <div class="basis-33 contenedor-row-arn">
-                <button onclick="aceRestaEloy()">-</button>
-                <div id="aceEloy"></div>
-                <button onclick="aceSumaEloy()">+</button>
-            </div>
-        </div>
-    </div>
-<!--ATAQUE ELOY-->
-    <div class="contenedor-row margin-1">
-        <div class="basis-33">Ataque</div>
-        <div class="basis-66">
-            <div class="basis-33 contenedor-row-arn">
-                <button onclick="ataqueRestaEloy()">-</button>
-                <div id="ataqueEloy"></div>
-                <button onclick="ataqueSumaEloy()">+</button>
-            </div>
-        </div>
-    </div>
-    <div class="contenedor-row margin-1">
-        <div class="basis-33">Ataque errado</div>
-        <div class="basis-66">
-            <div class="basis-33 contenedor-row-arn">
-                <button onclick="ataqueErrRestaEloy()">-</button>
-                <div id="ataqueErrEloy"></div>
-                <button onclick="ataqueErrSumaEloy()">+</button>
-            </div>
-        </div>
-    </div>
-    <div class="contenedor-row margin-1">
-        <div class="basis-33">Punto de ataque</div>
-        <div class="basis-66">
-            <div class="basis-33 contenedor-row-arn">
-                <button onclick="ataquePuntoRestaEloy()">-</button>
-                <div id="ataquePuntoEloy"></div>
-                <button onclick="ataquePuntoSumaEloy()">+</button>
-            </div>
-        </div>
-    </div>
-</section>
+        // Manejar inicio de arrastre
+        function startDragging(e) {
+            if (e.target.classList.contains('element') && !isAnimating) {
+                isDragging = true;
+                selectedElement = e.target;
+                selectedElementId = selectedElement.id;
+                
+                // Registrar posición inicial en la secuencia
+                const rect = selectedElement.getBoundingClientRect();
+                sequences[currentSequence].elements[selectedElementId] = {
+                    startX: rect.left - fieldContainer.getBoundingClientRect().left,
+                    startY: rect.top - fieldContainer.getBoundingClientRect().top,
+                    endX: rect.left - fieldContainer.getBoundingClientRect().left,
+                    endY: rect.top - fieldContainer.getBoundingClientRect().top
+                };
+                
+                offsetX = e.clientX - rect.left;
+                offsetY = e.clientY - rect.top;
+                selectedElement.style.cursor = 'grabbing';
+            }
+        }
 
-<!--FRANCO-->
-    <!--SAQUE FRANCO-->
-    <section id="franco" style="display:none">
-        <div class="contenedor-row">
-            <h1 class="txt-center">Franco</h1>
-        </div>
-    <div class="contenedor-row margin-1">
-        <div class="basis-33">Saque</div> 
-        <div class="basis-66">
-            <div class="basis-33 contenedor-row-arn">
-                <button onclick="saqueDentroRestaFranco()">-</button>
-                <div id="saqueDentroFranco"></div>
-                <button onclick="saqueDentroSumaFranco()">+</button>
-            </div>
-        </div>
-    </div>
-    <div class="contenedor-row margin-1">
-        <div class="basis-33">Saque errado</div>
-        <div class="basis-66">    
-            <div class="basis-33 contenedor-row-arn">
-                <button onclick="saqueFueraRestaFranco()">-</button>
-                <div id="saqueFueraFranco"></div>
-                <button onclick="saqueFueraSumaFranco()">+</button>
-            </div>
-        </div>
-    </div>
-    <div class="contenedor-row margin-1">
-        <div class="basis-33">ACE</div>
-        <div class="basis-66">
-            <div class="basis-33 contenedor-row-arn">
-                <button onclick="aceRestaFranco()">-</button>
-                <div id="aceFranco"></div>
-                <button onclick="aceSumaFranco()">+</button>
-            </div>
-        </div>
-    </div>
-<!--ATAQUE FRANCO-->
-    <div class="contenedor-row margin-1">
-        <div class="basis-33">Ataque</div>
-        <div class="basis-66">
-            <div class="basis-33 contenedor-row-arn">
-                <button onclick="ataqueRestaFranco()">-</button>
-                <div id="ataqueFranco"></div>
-                <button onclick="ataqueSumaFranco()">+</button>
-            </div>
-        </div>
-    </div>
-    <div class="contenedor-row margin-1">
-        <div class="basis-33">Ataque errado</div>
-        <div class="basis-66">
-            <div class="basis-33 contenedor-row-arn">
-                <button onclick="ataqueErrRestaFranco()">-</button>
-                <div id="ataqueErrFranco"></div>
-                <button onclick="ataqueErrSumaFranco()">+</button>
-            </div>
-        </div>
-    </div>
-    <div class="contenedor-row margin-1">
-        <div class="basis-33">Punto de ataque</div>
-        <div class="basis-66">
-            <div class="basis-33 contenedor-row-arn">
-                <button onclick="ataquePuntoRestaFranco()">-</button>
-                <div id="ataquePuntoFranco"></div>
-                <button onclick="ataquePuntoSumaFranco()">+</button>
-            </div>
-        </div>
-    </div>
-</section>
+        // Manejar arrastre
+        function dragElement(e) {
+            if (isDragging && selectedElement) {
+                const fieldRect = fieldContainer.getBoundingClientRect();
+                let newX = e.clientX - fieldRect.left - offsetX;
+                let newY = e.clientY - fieldRect.top - offsetY;
 
-<!--MAFU-->
-    <!--RECEPCION MAFU-->
-    <section id="mafu" style="display:none">
-        <div class="contenedor-row">
-            <h1 class="txt-center">Mafu</h1>
-        </div>
-    <div class="contenedor-row margin-1">
-        <div class="basis-33">A</div>
-        <div class="basis-66">
-            <div class="basis-33 contenedor-row-arn">
-                <button onclick="recepcionARestaMafu()">-</button>
-                <div id="recepcionAMafu"></div>
-                <button onclick="recepcionASumaMafu()">+</button>
-            </div>
-        </div>
-    </div>
-    <div class="contenedor-row margin-1">
-        <div class="basis-33">B</div>
-        <div class="basis-66">
-            <div class="basis-33 contenedor-row-arn">
-                <button onclick="recepcionBRestaMafu()">-</button>
-                <div id="recepcionBMafu"></div>
-                <button onclick="recepcionBSumaMafu()">+</button>
-            </div>
-        </div>
-    </div>
-    <div class="contenedor-row margin-1">
-        <div class="basis-33">C</div>
-        <div class="basis-66">
-            <div class="basis-33 contenedor-row-arn">
-                <button onclick="recepcionCRestaMafu()">-</button>
-                <div id="recepcionCMafu"></div>
-                <button onclick="recepcionCSumaMafu()">+</button>
-            </div>
-        </div>
-    </div>
-    <div class="contenedor-row margin-1">
-        <div class="basis-33">D</div>
-        <div class="basis-66">
-            <div class="basis-33 contenedor-row-arn">
-                <button onclick="recepcionDRestaMafu()">-</button>
-                <div id="recepcionDMafu"></div>
-                <button onclick="recepcionDSumaMafu()">+</button>
-            </div>
-        </div>
-    </div>
-</section>
+                // Mantener dentro del campo
+                newX = Math.max(0, Math.min(newX, fieldRect.width - selectedElement.offsetWidth));
+                newY = Math.max(0, Math.min(newY, fieldRect.height - selectedElement.offsetHeight));
 
-<!--BAUTI-->
-    <!--RECEPCION BAUTI-->
-    <section id="bauti" style="display:none">
-        <div class="contenedor-row">
-            <h1 class="txt-center">bauti</h1>
-        </div>
-    <div class="contenedor-row margin-1">
-        <div class="basis-33">A</div>
-        <div class="basis-66">
-            <div class="basis-33 contenedor-row-arn">
-                <button onclick="recepcionARestaBauti()">-</button>
-                <div id="recepcionABauti"></div>
-                <button onclick="recepcionASumaBauti()">+</button>
-            </div>
-        </div>
-    </div>
-    <div class="contenedor-row margin-1">
-        <div class="basis-33">B</div>
-        <div class="basis-66">
-            <div class="basis-33 contenedor-row-arn">
-                <button onclick="recepcionBRestaBauti()">-</button>
-                <div id="recepcionBBauti"></div>
-                <button onclick="recepcionBSumaBauti()">+</button>
-            </div>
-        </div>
-    </div>
-    <div class="contenedor-row margin-1">
-        <div class="basis-33">C</div>
-        <div class="basis-66">
-            <div class="basis-33 contenedor-row-arn">
-                <button onclick="recepcionCRestaBauti()">-</button>
-                <div id="recepcionCBauti"></div>
-                <button onclick="recepcionCSumaBauti()">+</button>
-            </div>
-        </div>
-    </div>
-    <div class="contenedor-row margin-1">
-        <div class="basis-33">D</div>
-        <div class="basis-66">
-            <div class="basis-33 contenedor-row-arn">
-                <button onclick="recepcionDRestaBauti()">-</button>
-                <div id="recepcionDBauti"></div>
-                <button onclick="recepcionDSumaBauti()">+</button>
-            </div>
-        </div>
-    </div>
-    </section>
+                selectedElement.style.left = newX + 'px';
+                selectedElement.style.top = newY + 'px';
+
+                // Actualizar posición final en la secuencia
+                sequences[currentSequence].elements[selectedElementId].endX = newX;
+                sequences[currentSequence].elements[selectedElementId].endY = newY;
+            }
+        }
+
+        // Detener arrastre
+        function stopDragging() {
+            if (isDragging) {
+                isDragging = false;
+                if (selectedElement) {
+                    selectedElement.style.cursor = 'move';
+                    selectedElement = null;
+                    selectedElementId = null;
+                }
+            }
+        }
+
+        // Añadir nueva secuencia
+        function addSequence() {
+            const newSequenceNumber = Object.keys(sequences).length + 1;
+            sequences[newSequenceNumber] = { elements: {} };
+            currentSequence = newSequenceNumber;
+            updateSequenceTabs();
+            updateSequenceLog();
+        }
+
+        // 7. Actualizar la inicialización con el nuevo botón
+        document.addEventListener('DOMContentLoaded', () => {
+            // ... otros event listeners
+            
+            // Nuevo evento para el botón de eliminar
+            document.getElementById('btnDeleteSequence').addEventListener('click', deleteSequence);
+            
+            // Inicializar registro
+            updateSequenceLog();
+        });
 
 
-        <form id="fs-frm" name="forms" class="contenedor-flex-col center-100 form" action="https://formspree.io/f/mbjwewjw" name="simple-contact-form" accept-charset="utf-8" method="post">
-            <div name="emanuel" id="resultadosEmanuel">
-                <input name="SaqueDentroEmanuel" type="hidden" id="formSaqueDentroEmanuel" value="0">
-                <input name="SaqueFueraEmanuel" type="hidden" id="formSaqueFueraEmanuel" value="0">
-                <input name="ACEEmanuel" type="hidden" id="formACEEmanuel" value="0">
-                <input name="AtaqueEmanuel" type="hidden" id="formAtaqueEmanuel" value="0">
-                <input name="AtaqueErrEmanuel" type="hidden" id="formAtaqueErrEmanuel" value="0">
-                <input name="AtaquePuntoEmanuel" type="hidden" id="formAtaquePuntoEmanuel" value="0">
-            </div>
-            <div name="pika" id="resultadosPika">
-                <input name="SaqueDentroPika" type="hidden" id="formSaqueDentroPika" value="0">
-                <input name="SaqueFueraPika" type="hidden" id="formSaqueFueraPika" value="0">
-                <input name="ACEPika" type="hidden" id="formACEPika" value="0">
-                <input name="AtaquePika" type="hidden" id="formAtaquePika" value="0">
-                <input name="AtaqueErrPika" type="hidden" id="formAtaqueErrPika" value="0">
-                <input name="AtaquePuntoPika" type="hidden" id="formAtaquePuntoPika" value="0">
-            </div>
-            <div  name="Gusti" id="resultadosGusti">
-                <input name="SaqueDentroGusti" type="hidden" id="formSaqueDentroGusti" value="0">
-                <input name="SaqueFueraGusti" type="hidden" id="formSaqueFueraGusti" value="0">
-                <input name="ACEGusti" type="hidden" id="formACEGusti" value="0">
-                <input name="RecepcionAGusti" type="hidden" id="formRecepcionAGusti" value="0">
-                <input name="RecepcionBGusti" type="hidden" id="formRecepcionBGusti" value="0">
-                <input name="RecepcionCGusti" type="hidden" id="formRecepcionCGusti" value="0">
-                <input name="RecepcionDGusti" type="hidden" id="formRecepcionDGusti" value="0">
-                <input name="AtaqueGusti" type="hidden" id="formAtaqueGusti" value="0">
-                <input name="AtaqueErrGusti" type="hidden" id="formAtaqueErrGusti" value="0">
-                <input name="AtaquePuntoGusti" type="hidden" id="formAtaquePuntoGusti" value="0">
-            </div>
-            <div  name="Hernan" id="resultadosHernan">
-                <input name="SaqueDentroHernan" type="hidden" id="formSaqueDentroHernan" value="0">
-                <input name="SaqueFueraHernan" type="hidden" id="formSaqueFueraHernan" value="0">
-                <input name="ACEHernan" type="hidden" id="formACEHernan" value="0">
-                <input name="RecepcionAHernan" type="hidden" id="formRecepcionAHernan" value="0">
-                <input name="RecepcionBHernan" type="hidden" id="formRecepcionBHernan" value="0">
-                <input name="RecepcionCHernan" type="hidden" id="formRecepcionCHernan" value="0">
-                <input name="RecepcionDHernan" type="hidden" id="formRecepcionDHernan" value="0">
+        // Cambiar secuencia actual
+        function changeSequence(sequenceNumber) {
+    // Guardar posiciones actuales en la secuencia anterior
+        elements.forEach(el => {
+            const element = document.getElementById(el.id);
+            if (element) {
+                const rect = element.getBoundingClientRect();
+                const fieldRect = fieldContainer.getBoundingClientRect();
+                sequences[currentSequence].elements[el.id] = {
+                    startX: rect.left - fieldRect.left,
+                    startY: rect.top - fieldRect.top,
+                    endX: rect.left - fieldRect.left,
+                    endY: rect.top - fieldRect.top
+                };
+            }
+        });
 
-                <input name="AtaqueHernan" type="hidden" id="formAtaqueHernan" value="0">
-                <input name="AtaqueErrHernan" type="hidden" id="formAtaqueErrHernan" value="0">
-                <input name="AtaquePuntoHernan" type="hidden" id="formAtaquePuntoHernan" value="0">
-            </div>
-            <div  name="Mati" id="resultadosMati">
-                <input name="SaqueDentroMati" type="hidden" id="formSaqueDentroMati" value="0">
-                <input name="SaqueFueraMati" type="hidden" id="formSaqueFueraMati" value="0">
-                <input name="ACEMati" type="hidden" id="formACEMati" value="0">
-                <input name="RecepcionAMati" type="hidden" id="formRecepcionAMati" value="0">
-                <input name="RecepcionBMati" type="hidden" id="formRecepcionBMati" value="0">
-                <input name="RecepcionCMati" type="hidden" id="formRecepcionCMati" value="0">
-                <input name="RecepcionDMati" type="hidden" id="formRecepcionDMati" value="0">
-                <input name="AtaqueMati" type="hidden" id="formAtaqueMati" value="0">
-                <input name="AtaqueErrMati" type="hidden" id="formAtaqueErrMati" value="0">
-                <input name="AtaquePuntoMati" type="hidden" id="formAtaquePuntoMati" value="0">
-            </div>
-            <div  name="Emi" id="resultadosEmi">
-                <input name="SaqueDentroEmi" type="hidden" id="formSaqueDentroEmi" value="0">
-                <input name="SaqueFueraEmi" type="hidden" id="formSaqueFueraEmi" value="0">
-                <input name="ACEEmi" type="hidden" id="formACEEmi" value="0">
-                <input name="RecepcionAEmi" type="hidden" id="formRecepcionAEmi" value="0">
-                <input name="RecepcionBEmi" type="hidden" id="formRecepcionBEmi" value="0">
-                <input name="RecepcionCEmi" type="hidden" id="formRecepcionCEmi" value="0">
-                <input name="RecepcionDEmi" type="hidden" id="formRecepcionDEmi" value="0">
-                <input name="AtaqueEmi" type="hidden" id="formAtaqueEmi" value="0">
-                <input name="AtaqueErrEmi" type="hidden" id="formAtaqueErrEmi" value="0">
-                <input name="AtaquePuntoEmi" type="hidden" id="formAtaquePuntoEmi" value="0">
-            </div>
-            <div  name="Fausto" id="resultadosFausto">
-                <input name="SaqueDentroFausto" type="hidden" id="formSaqueDentroFausto" value="0">
-                <input name="SaqueFueraFausto" type="hidden" id="formSaqueFueraFausto" value="0">
-                <input name="ACEFausto" type="hidden" id="formACEFausto" value="0">
-                <input name="RecepcionAFausto" type="hidden" id="formRecepcionAFausto" value="0">
-                <input name="RecepcionBFausto" type="hidden" id="formRecepcionBFausto" value="0">
-                <input name="RecepcionCFausto" type="hidden" id="formRecepcionCFausto" value="0">
-                <input name="RecepcionDFausto" type="hidden" id="formRecepcionDFausto" value="0">
-                <input name="AtaqueFausto" type="hidden" id="formAtaqueFausto" value="0">
-                <input name="AtaqueErrFausto" type="hidden" id="formAtaqueErrFausto" value="0">
-                <input name="AtaquePuntoFausto" type="hidden" id="formAtaquePuntoFausto" value="0">
-            </div>
-            <div name="Santi" id="resultadosSanti">
-                <input name="SaqueDentroSanti" type="hidden" id="formSaqueDentroSanti" value="0">
-                <input name="SaqueFueraSanti" type="hidden" id="formSaqueFueraSanti" value="0">
-                <input name="ACESanti" type="hidden" id="formACESanti" value="0">
-                <input name="AtaqueSanti" type="hidden" id="formAtaqueSanti" value="0">
-                <input name="AtaqueErrSanti" type="hidden" id="formAtaqueErrSanti" value="0">
-                <input name="AtaquePuntoSanti" type="hidden" id="formAtaquePuntoSanti" value="0">
-            </div> 
-            <div name="Martu" id="resultadosMartu">
-                <input name="SaqueDentroMartu" type="hidden" id="formSaqueDentroMartu" value="0">
-                <input name="SaqueFueraMartu" type="hidden" id="formSaqueFueraMartu" value="0">
-                <input name="ACEMartu" type="hidden" id="formACEMartu" value="0">
-                <input name="AtaqueMartu" type="hidden" id="formAtaqueMartu" value="0">
-                <input name="AtaqueErrMartu" type="hidden" id="formAtaqueErrMartu" value="0">
-                <input name="AtaquePuntoMartu" type="hidden" id="formAtaquePuntoMartu" value="0">
-            </div>
-            <div name="Eloy" id="resultadosEloy">
-                <input name="SaqueDentroEloy" type="hidden" id="formSaqueDentroEloy" value="0">
-                <input name="SaqueFueraEloy" type="hidden" id="formSaqueFueraEloy" value="0">
-                <input name="ACEEloy" type="hidden" id="formACEEloy" value="0">
-                <input name="AtaqueEloy" type="hidden" id="formAtaqueEloy" value="0">
-                <input name="AtaqueErrEloy" type="hidden" id="formAtaqueErrEloy" value="0">
-                <input name="AtaquePuntoEloy" type="hidden" id="formAtaquePuntoEloy" value="0">
-            </div>
-            <div name="Franco" id="resultadosFranco">
-                <input name="SaqueDentroFranco" type="hidden" id="formSaqueDentroFranco" value="0">
-                <input name="SaqueFueraFranco" type="hidden" id="formSaqueFueraFranco" value="0">
-                <input name="ACEFranco" type="hidden" id="formACEFranco" value="0">
-                <input name="AtaqueFranco" type="hidden" id="formAtaqueFranco" value="0">
-                <input name="AtaqueErrFranco" type="hidden" id="formAtaqueErrFranco" value="0">
-                <input name="AtaquePuntoFranco" type="hidden" id="formAtaquePuntoFranco" value="0">
-            </div>
-            <div name="Mafu" id="resultadosmafu">
-                <input name="RecepcionAMafu" type="hidden" id="formRecepcionAMafu" value="0">
-                <input name="RecepcionBMafu" type="hidden" id="formRecepcionBMafu" value="0">
-                <input name="RecepcionCMafu" type="hidden" id="formRecepcionCMafu" value="0">
-                <input name="RecepcionDMafu" type="hidden" id="formRecepcionDMafu" value="0">
-            </div>
-            <div name="Bauti" id="resultadosBauti">
-                <input name="RecepcionABauti" type="hidden" id="formRecepcionABauti" value="0">
-                <input name="RecepcionBBauti" type="hidden" id="formRecepcionBBauti" value="0">
-                <input name="RecepcionCBauti" type="hidden" id="formRecepcionCBauti" value="0">
-                <input name="RecepcionDBauti" type="hidden" id="formRecepcionDBauti" value="0">
-            </div>           
-        </form>
-        <button onclick="completarFormulario()">Enviar estadisticas</button>
-        <script src="scripts.js"></script>
-    </body>
+    // Actualizar secuencia actual
+    currentSequence = sequenceNumber;
+    
+    // Restaurar posiciones de la nueva secuencia
+    elements.forEach(el => {
+        const element = document.getElementById(el.id);
+        if (element && sequences[currentSequence].elements[el.id]) {
+            const pos = sequences[currentSequence].elements[el.id];
+            element.style.left = pos.startX + 'px';
+            element.style.top = pos.startY + 'px';
+        }
+    });
+
+    // Actualizar interfaz
+    updateSequenceTabs();
+    updateSequenceLog();
+}
+
+        // Reproducir todas las secuencias
+        async function playAllSequences() {
+            if (isAnimating) return;
+            isAnimating = true;
+            
+            for (const [seqNum, sequence] of Object.entries(sequences)) {
+                await animateSequence(sequence);
+            }
+            
+            isAnimating = false;
+        }
+
+        // Animar una secuencia individual
+        async function animateSequence(sequence) {
+            return new Promise(resolve => {
+                const log = document.getElementById('sequenceLog');
+                log.innerHTML = '<div class="log-entry current-sequence">Reproduciendo secuencia...</div>';
+                
+                // Guardar posiciones originales
+                const originalPositions = new Map();
+                elements.forEach(el => {
+                    const element = document.getElementById(el.id);
+                    originalPositions.set(el.id, {
+                        x: element.style.left,
+                        y: element.style.top
+                    });
+                });
+
+                // Aplicar animación
+                Object.entries(sequence.elements).forEach(([id, movement]) => {
+                    const element = document.getElementById(id);
+                    if (element) {
+                        element.style.transition = 'all 1s ease-in-out';
+                        element.style.left = movement.endX + 'px';
+                        element.style.top = movement.endY + 'px';
+                    }
+                });
+
+                // Actualizar registro durante la animación
+                setTimeout(() => {
+                    log.innerHTML = Object.entries(sequence.elements).map(([id, movement]) => {
+                        const element = elements.find(el => el.id === id);
+                        return `Elemento ${element?.type || 'desconocido'} movido a (${Math.round(movement.endX)}, ${Math.round(movement.endY)})`;
+                    }).join('<br>');
+                }, 500);
+
+                // Restaurar posiciones y resolver
+                setTimeout(() => {
+                    elements.forEach(el => {
+                        const element = document.getElementById(el.id);
+                        if (element) {
+                            element.style.transition = 'none';
+                            const original = originalPositions.get(el.id);
+                            element.style.left = original.x;
+                            element.style.top = original.y;
+                        }
+                    });
+                    resolve();
+                }, 1100);
+            });
+        }
+        function updateSequenceTabs() {
+            sequenceTabs.innerHTML = '';
+            Object.keys(sequences).forEach(seq => {
+                const tab = document.createElement('div');
+                tab.className = `sequence-tab ${seq == currentSequence ? 'active' : ''}`;
+                tab.textContent = `Secuencia ${seq}`;
+                tab.dataset.sequence = seq;
+                tab.addEventListener('click', () => changeSequence(parseInt(seq)));
+                sequenceTabs.appendChild(tab);
+            });
+        }
+
+        function deleteSequence() {
+            const totalSequences = Object.keys(sequences).length;
+            
+            if (totalSequences === 1) {
+                alert('Debe haber al menos una secuencia');
+                return;
+            }
+            
+            if (confirm(`¿Eliminar la secuencia ${currentSequence}?`)) {
+                // Eliminar la secuencia
+                delete sequences[currentSequence];
+                
+                // Reorganizar las secuencias restantes
+                const newSequences = {};
+                let newIndex = 1;
+                Object.keys(sequences).forEach(key => {
+                    if (key != currentSequence) {
+                        newSequences[newIndex] = sequences[key];
+                        newIndex++;
+                    }
+                });
+                
+                sequences = newSequences;
+                currentSequence = Math.min(currentSequence, Object.keys(sequences).length);
+                
+                // Actualizar la interfaz
+                updateSequenceTabs();
+                updateSequenceLog();
+                changeSequence(currentSequence);
+            }
+        }
+
+// Función para actualizar el registro de secuencias
+        function updateSequenceLog() {
+            const log = document.getElementById('sequenceLog');
+            log.innerHTML = '';
+            
+            Object.entries(sequences).forEach(([seqNum, sequence]) => {
+                const entry = document.createElement('div');
+                entry.className = `log-entry ${seqNum == currentSequence ? 'current-sequence' : ''}`;
+                
+                const moves = Object.entries(sequence.elements).map(([id, data]) => {
+                    const element = elements.find(el => el.id === id);
+                    const elementType = element ? element.type : 'Elemento eliminado';
+                    return `${elementType}: (${Math.round(data.startX)},${Math.round(data.startY)}) → (${Math.round(data.endX)},${Math.round(data.endY)})`;
+                }).join('<br>');
+                
+                entry.innerHTML = `<strong>Secuencia ${seqNum}:</strong><br>${moves || 'Sin movimientos registrados'}`;
+                log.appendChild(entry);
+            });
+        }
+
+        // Reiniciar editor
+        function resetEditor() {
+            fieldContainer.innerHTML = '';
+            elements = [];
+            elementCounter = 0;
+            currentSequence = 1;
+            sequences = { 1: { elements: {} } };
+            sequenceTabs.innerHTML = '<div class="sequence-tab active" data-sequence="1">Secuencia 1</div>';
+            document.getElementById('sequenceLog').innerHTML = '<div class="log-entry current-sequence">Secuencia 1: Edición actual</div>';
+        }
+    </script>
+</body>
 </html>
-
-
-
-
-
-
-
-
-
-
     
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    </script>
+</body>
